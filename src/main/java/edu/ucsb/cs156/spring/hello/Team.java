@@ -1,5 +1,7 @@
 package edu.ucsb.cs156.spring.hello;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.util.ArrayList;
 
 /**
@@ -67,12 +69,14 @@ public class Team {
      */
     @Override
     public boolean equals(Object obj) {
-        if (obj == this) {
-            return true;
-        }
         if (!(obj instanceof Team)) {
             return false;
         }
+        
+        if (obj == this) {
+            return true;
+        }
+        
         Team other = (Team) obj;
         return this.name.equals(other.name) && this.members.equals(other.members);
     }
@@ -84,6 +88,8 @@ public class Team {
     public String toString() {
         return "Team(name=" + this.name + ", members=" + this.members + ")";
     }
+    
+
 
     /**
      * Get a hash code for the team

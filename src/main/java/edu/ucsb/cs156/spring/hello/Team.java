@@ -1,7 +1,5 @@
 package edu.ucsb.cs156.spring.hello;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import java.util.ArrayList;
 
 /**
